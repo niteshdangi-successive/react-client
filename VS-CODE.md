@@ -51,13 +51,13 @@ To use this feature, we can either set a tasks.json file or through some popular
 
 # 8 useful plugins of VS-CODE
 
-1). GitLens.
+# 1). GitLens.
 
 
 GitLens simply helps you better understand code. Quickly glimpse into who changed a line or code block, why, and when. Jump back through history to gain further insights into how and why the code evolved. Effortlessly explore the history and evolution of a code base. It is powerful, feature-rich, and highly customizable to meet your needs.
 
 
-2). Live Share.
+# 2). Live Share.
 
 
 At the moment, when doing pair programming, the regular practice is to share the screen via Zoom or any other provider. If you have tried that, you know its flaws. There’s a lot of room for improvement. This plugin aims to fill this gap.
@@ -65,37 +65,37 @@ At the moment, when doing pair programming, the regular practice is to share the
 This plugin will let you do pair programming remotely. It currently supports up to 30 people. It is feature-packed. You don’t even need to jump on a Zoom call anymore. This plugin provides a built-in chat or build-in audio calls.
 
 
-3). VS Code Remote Development.
+# 3). VS Code Remote Development.
 
 
 This extension provides seamless development in containers remotely on physical or virtual machines. You don’t need to run anything on the server. Just SSH to the machine using this extension.
 
 
-4). Peacock.
+# 4). Peacock.
 
 Do you switch between different projects often? This extension will help you customize each project so you can have some visual feedback on what you are currently working on.
 
 
-5). Bracket Pair Colorizer 2.
+# 5). Bracket Pair Colorizer 2.
 
 
 This is a very simple yet very useful extension. It allows matching brackets to be identified with colors. The user can define which characters to match and which colors to use.
 
 
-6). Color Highlight.
+# 6). Color Highlight.
 
 
 Another simple yet useful tool. It will simply highlight CSS/web colors found in your document.
 
 
-7). ESLint.
+# 7). ESLint.
 
 A plugin that integrates ESLint into VS Code. You will need to have ESLint installed for it to work and provide an .eslintrc configuration file.
 
 It has a lot of configuration options that are worth checking out.
 
 
-8). Prettier.
+# 8). Prettier.
 
 
 An extension to support Prettier, which is an opinionated code formatter. It removes all original styling and ensures that all outputted code conforms to a consistent style.
