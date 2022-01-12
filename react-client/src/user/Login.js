@@ -6,12 +6,63 @@ const Login = () => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState('');
+    const [emailError, setEmailError] = useState('');
+    const [passwordError, setPasswordError] = useState('');
 
-    const onSubmit = () => {
-        setEmail("");
-        setPassword("");
-        console.log("logined");
-    }
+    const emailValidation = () => {
+        let REGEX = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if(email === "") {
+          setEmailError("email is required")
+        }
+        else if(email.match(REGEX)){
+          setEmailError("")
+        }
+        else {
+          setEmailError("please Enter valid Email")
+        }
+      }
+
+
+      const passwordErrorValidation = () => {
+        if(password === ""){
+          setPasswordError('Password is required')
+        }
+        else {
+          setPasswordError("")
+        }
+      }
+     const passwordValidation = () => {
+         let REGEX = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$";
+         if(password.match(REGEX)) {
+           return true;
+         }
+         else {
+           return false;
+         }
+       }
+
+
+       const onSubmit = () => {
+        let pass = passwordValidation();
+        if(emailError !== "") {
+          alert('Email is not Valid and not proper format read the instruction carefully.')
+        }
+        else if(!pass) {
+          alert('Password is not Valid because minumum six inputs are allowed. ')
+        }
+        else {
+          window.alert("email:"+ email + "  password: " + password);
+          setEmail('');
+          setPassword('');
+          }
+      }
+
+
+    // const onSubmit = () => {
+    //     setEmail("");
+    //     setPassword("");
+    //     console.log("logined");
+    // }
 
 
     return(
@@ -21,11 +72,15 @@ const Login = () => {
                    <div  className="form-layout" > 
                         <h1 >Welcome to the Login Page</h1>
                         <div className="email-field" >
-                            <TextField  label="Email" autoComplete="off" align="left" type="email" onChange={(e) => setEmail(e)} value={email} />
+                            <TextField  label="Email" autoComplete="off" align="left" type="email" onChange={(e) => setEmail(e)} onBlur = {emailValidation} value={email} />
+                            <span className = "error">{emailError}</span>
                         </div>
+                        
                         <div className="password-field" >
-                            <TextField  label="Password" autoComplete="off" align="left" type="password" onChange={(e) => setPassword(e)} value={password} />
+                            <TextField  label="Password" autoComplete="off" align="left" type="password" onChange={(e) => setPassword(e)} onBlur = {passwordErrorValidation} value={password} />
+                            <span className = "error">{passwordError}</span>
                         </div>
+                        
                         <div  className="btn" >
                             <Button  submit > Login </Button>
                         </div>
