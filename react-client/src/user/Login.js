@@ -2,6 +2,8 @@ import React, { useState} from "react";
 import { Form, TextField, Button, FormLayout} from '@shopify/polaris';
 import "./Login.css";
 
+// function component
+
 const Login = () => {
 
     const [email, setEmail] = useState("");
@@ -135,30 +137,7 @@ export default Login;
 //         </div>
 
 
-    //   <div>
-    //     <MuiThemeProvider>
-    //       <div>
-    //       <AppBar
-    //          title="Login"
-    //        />
-    //        <TextField
-    //          hintText="Enter your Username"
-    //          floatingLabelText="Username"
-    //          onChange = {(event,newValue) => this.setState({email:newValue})}
-    //          />
-    //        <br/>
-    //          <TextField
-    //            type="password"
-    //            hintText="Enter your Password"
-    //            floatingLabelText="Password"
-    //            onChange = {(event,newValue) => this.setState({password:newValue})}
-    //            />
-    //          <br/>
-    //          <RaisedButton label="Submit" primary={true} style={style} onClick={(event) => this.handleClick(event)}/>
-    //      </div>
-    //      </MuiThemeProvider>
-    //   </div>
-//     );
+    //     );
 //   }
 // }
 
